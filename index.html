@@ -3,146 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Гаджеты - Обзоры и Описания</title>
+    <title>TechTrend - Гаджеты Будущего</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Мир Гаджетов</h1>
-        <nav>
-            <a href="#home">Главная</a> | 
-            <a href="#gadgets">Гаджеты</a> | 
-            <a href="#contact">Контакты</a>
-        </nav>
+        <div class="header-content">
+            <h1>TechTrend</h1>
+            <nav>
+                <a href="#home">Главная</a>
+                <a href="#gadgets">Гаджеты</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </div>
     </header>
 
     <section id="gadgets">
-        <h2>Популярные Гаджеты 2025</h2>
-        
-        <div class="gadget">
-            <img src="https://via.placeholder.com/300x200" alt="Смартфон">
-            <h3>Смартфон X-500</h3>
-            <p>Мощный смартфон с 108 МП камерой и батареей на 5000 мАч. Идеален для фото и игр.</p>
-            <a href="https://example.com/x500" target="_blank">Подробнее</a>
-        </div>
+        <h2>Гаджеты 2025</h2>
+        <div class="gadget-grid">
+            <div class="gadget-card">
+                <img src="https://via.placeholder.com/400x250" alt="Смартфон Neo">
+                <div class="gadget-info">
+                    <h3>Смартфон Neo X</h3>
+                    <p>Сверхбыстрый процессор, камера 120 МП и экран AMOLED.</p>
+                    <a href="https://example.com/neox" class="btn">Узнать больше</a>
+                </div>
+            </div>
 
-        <div class="gadget">
-            <img src="https://via.placeholder.com/300x200" alt="Умные часы">
-            <h3>Умные часы SmartFit</h3>
-            <p>Часы с функцией измерения пульса, сна и водозащитой до 50 метров.</p>
-            <a href="https://example.com/smartfit" target="_blank">Подробнее</a>
-        </div>
+            <div class="gadget-card">
+                <img src="https://via.placeholder.com/400x250" alt="Часы Vision">
+                <div class="gadget-info">
+                    <h3>Часы Vision Pro</h3>
+                    <p>Трекер здоровья, водозащита и стильный дизайн.</p>
+                    <a href="https://example.com/visionpro" class="btn">Узнать больше</a>
+                </div>
+            </div>
 
-        <div class="gadget">
-            <img src="https://via.placeholder.com/300x200" alt="Ноутбук">
-            <h3>Ноутбук ProBook Z</h3>
-            <p>Легкий и мощный ноутбук с процессором 13-го поколения и SSD на 1 ТБ.</p>
-            <a href="https://example.com/probookz" target="_blank">Подробнее</a>
+            <div class="gadget-card">
+                <img src="https://via.placeholder.com/400x250" alt="Ноутбук Ultra">
+                <div class="gadget-info">
+                    <h3>Ноутбук Ultra Z</h3>
+                    <p>Мощность для работы и игр, вес всего 1.2 кг.</p>
+                    <a href="https://example.com/ultraz" class="btn">Узнать больше</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Мир Гаджетов. Все права защищены.</p>
+        <p>© 2025 TechTrend. Технологии, которые вдохновляют.</p>
     </footer>
 </body>
 </html>
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #1a73e8;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #00d4ff;
 }
 
 section {
-    padding: 20px;
+    padding: 100px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 h2 {
-    color: #1a73e8;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00d4ff;
+    text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+.gadget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gadget-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.gadget-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+}
+
+.gadget-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.gadget-info {
+    padding: 20px;
     text-align: center;
 }
 
-.gadget {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 20px 0;
-    padding: 15px;
-    text-align: center;
-    width: 30%;
+.gadget-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.gadget-info p {
+    font-size: 0.95em;
+    color: #d1d1d1;
+    margin-bottom: 15px;
+}
+
+.btn {
     display: inline-block;
-    vertical-align: top;
-}
-
-.gadget img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.gadget h3 {
-    margin: 10px 0;
-    color: #333;
-}
-
-.gadget p {
-    font-size: 0.9em;
-    color: #666;
-}
-
-.gadget a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #1a73e8;
-    color: white;
+    padding: 10px 20px;
+    background: #00d4ff;
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.gadget a:hover {
-    background-color: #1557b0;
+.btn:hover {
+    background: #00a3cc;
+    transform: scale(1.05);
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #1a73e8;
-    color: white;
-    position: fixed;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #d1d1d1;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
-/* Адаптивность для мобильных устройств */
+/* Адаптивность */
 @media (max-width: 768px) {
-    .gadget {
-        width: 100%;
-        margin: 10px 0;
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    h2 {
+        font-size: 2em;
     }
 }

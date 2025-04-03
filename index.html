@@ -2,31 +2,147 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Сайт о гаджетах: топы, цены, где купить</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #333; }
-        h2 { color: #0066cc; }
-        a { color: #ff4500; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гаджеты - Обзоры и Описания</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Сайт о гаджетах: топы, цены, где купить выгодно</h1>
-    <p>Лучшие гаджеты 2025 года по доступным ценам с проверенными ссылками.</p>
-    
-    <h2>1. Наушники Xiaomi Redmi Airdots</h2>
-    <p>Цена: ~3894 тенге</p>
-    <p>Где купить: <a href="https://kaspi.kz/shop/p/xiaomi-redmi-airdots-chernyi-100794852/">Kaspi.kz</a></p>
-    
-    <h2>2. Портативная колонка JBL GO</h2>
-    <p>Цена: ~9500 тенге</p>
-    <p>Где купить: <a href="https://www.sulpak.kz/g/portativnaya-akustika-jbl-go-3-cherniy">Sulpak</a></p>
-    
-    <h2>3. Power Bank 10000 мАч</h2>
-    <p>Цена: ~7000 тенге</p>
-    <p>Где купить: <a href="https://www.technodom.kz/p/portativnoe-zaradnoe-ustrojstvo-power-bank-xiaomi-10000-mah-107010">Technodom</a></p>
-    
-    <p><small>Обновлено: 2 апреля 2025</small></p>
+    <header>
+        <h1>Мир Гаджетов</h1>
+        <nav>
+            <a href="#home">Главная</a> | 
+            <a href="#gadgets">Гаджеты</a> | 
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="gadgets">
+        <h2>Популярные Гаджеты 2025</h2>
+        
+        <div class="gadget">
+            <img src="https://via.placeholder.com/300x200" alt="Смартфон">
+            <h3>Смартфон X-500</h3>
+            <p>Мощный смартфон с 108 МП камерой и батареей на 5000 мАч. Идеален для фото и игр.</p>
+            <a href="https://example.com/x500" target="_blank">Подробнее</a>
+        </div>
+
+        <div class="gadget">
+            <img src="https://via.placeholder.com/300x200" alt="Умные часы">
+            <h3>Умные часы SmartFit</h3>
+            <p>Часы с функцией измерения пульса, сна и водозащитой до 50 метров.</p>
+            <a href="https://example.com/smartfit" target="_blank">Подробнее</a>
+        </div>
+
+        <div class="gadget">
+            <img src="https://via.placeholder.com/300x200" alt="Ноутбук">
+            <h3>Ноутбук ProBook Z</h3>
+            <p>Легкий и мощный ноутбук с процессором 13-го поколения и SSD на 1 ТБ.</p>
+            <a href="https://example.com/probookz" target="_blank">Подробнее</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Мир Гаджетов. Все права защищены.</p>
+    </footer>
 </body>
 </html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #1a73e8;
+    text-align: center;
+}
+
+.gadget {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gadget img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.gadget h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.gadget p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.gadget a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.gadget a:hover {
+    background-color: #1557b0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a73e8;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .gadget {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
